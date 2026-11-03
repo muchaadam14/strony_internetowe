@@ -1,0 +1,91 @@
+body {
+	background-color: #cfe8ff;
+}
+
+#ambulance {
+	width: 500px; height: 300px;
+	border: 2px solid black;
+	border-radius: 200px 10px 10px 10px;
+	text-align: center;
+	color: red;
+	font-family: monospace;
+	font-size: 50px;
+	background: linear-gradient(to bottom, #ffffff, #ffffff, #f32828, #0b70cf);
+}
+
+.wheel {
+	width: 90px;
+	height: 90px;
+	background: #e8e8e8;
+	border: 10px solid black;
+	border-radius: 100px;
+	text-align: center;
+	animation: spin 1s linear infinite;
+}
+
+#wheel-front {
+	/* TODO: ustaw pozycję przedniego koła */
+	position: relative;
+	left: 70px;
+	bottom: 50px;
+}
+
+#wheel-back {
+	/* TODO: ustaw pozycję tylnego koła */
+	position: relative;
+	left: 350px;
+	bottom: 160px;
+}
+
+@keyframes spin {
+	/* TODO: opisz pełny obrót od 0 do 360 stopni */
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+#siren {
+	/* TODO: nadaj syrenie rozmiar, czarne tło i zaokrąglony górny brzeg */
+	width: 60px;
+	height: 60px;
+	background-color: black;
+	border-radius: 50px 50px 0px 0px;
+	position: relative;
+	left: 230px;
+}
+
+#siren:hover {
+	/* TODO: uruchom animację siren po najechaniu myszką */
+	animation: siren 1.5s infinite;
+}
+
+@keyframes siren {
+	/* TODO: opisz zmianę koloru tła od czarnego, przez niebieski, do czerwonego */
+	0% { background-color: black;}
+	25% { background-color: blue;}
+	75% { background-color: red;}
+}
+
+#emergency {
+	/* TODO: ustaw czerwoną tabliczkę z niebieską ramką i włącz płynne przejście */
+	position: absolute;
+	right: 25%;
+	top: 200px;
+	padding: 20px;
+	background: linear-gradient(to bottom, #ffffff, #ffffff, #f32828, #0b70cf);
+	color: black;
+	font-weight: bold;
+	font-family: monospace;
+	text-align: center;
+	border: 3px solid black;
+	border-radius: 15px;
+	transition: transform 1s ease;
+}
+
+#emergency:hover {
+	/* TODO: powiększ tabliczkę po najechaniu myszką */
+	transform: scale(1.15);
+}
